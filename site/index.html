@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Dia Dos Namorados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="painel">
+        <h1>Feliz Dia Dos Namorados</h1>
+        <h2>Aceita namorar comigo?</h2>
+        
+
+        <a href="https://youtu.be/gOSP5q2VJXk?t=22" target="_blank"><button id="bsim"> Sim!</button></a>
+        <button onmouseover="fuja()" id="bnao"> Não...</button>
+    </div>
+
+    <script>
+        function fuja() {
+            var botaoNao = document.getElementById("bnao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+    </script>
+</body>
+</html>
